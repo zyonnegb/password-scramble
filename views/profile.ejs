@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <title>Password Scrambler</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1>Password Page</h1>
+        <a href="/logout" class="btn btn-danger btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-6">
+          <h3>Messages</h3>
+          <p>Click Thumbs-Up To Scramble</p>
+          <ul class="messages">
+          <% for(var i=0; i<passwords.length; i++) {%>
+            <li class="message">
+              <span><%= passwords[i].password %></span>
+              <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+              <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+            </li>
+          <% } %>
+          </ul>
+
+          <h2>Enter Password</h2>
+        <% if (user.local.email) { %>
+          <form action="/messages" method="POST">
+            <input type="text" placeholder="password" name="password">
+            <button type="submit">Submit</button>
+          </form>
+          <p>Do Not Enter Real Passwords! This Is For Testing Purposes Only!!</p>
+        </div>
+        <% } %>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>

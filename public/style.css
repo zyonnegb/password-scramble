@@ -1,0 +1,24 @@
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+img{
+  height: 200px;
+}
+.row{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.col-sm-6{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .25);
+}
